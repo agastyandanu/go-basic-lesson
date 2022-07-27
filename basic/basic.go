@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 
@@ -108,6 +111,66 @@ func main() {
 	fmt.Println("slice", months[3:7]) //slice (get array-data starts from index 3rd to before 7th = data-index 3, 4, 5 & 6)
 
 
+
+	// IF EXPRESSION
+	selfName := "Danu"
+
+	if selfName == "Danu" {
+		fmt.Println("True")
+	} else if selfName == "Danoe" {
+		fmt.Println("False")
+	} else{
+		fmt.Println("Totally False")
+	}
+
+
+	// SWITCH CASE
+	lang := "French"
+	switch lang {
+	case "Indonesia":
+		fmt.Println("Halo, Danu!")
+	case "English":
+		fmt.Println("Hello, Danu!")
+	case "French":
+		fmt.Println("Bonjour, Danu!")
+	}
+
+	// FOR LOOP
+	for counter := 1; counter <= 7; counter ++ {
+		fmt.Println("Counter :", counter)
+	}
+
+	// FUNCTION CALLING
+	sayHello("morning", "Danu")
+
+	// FUNCTION RETURN VALUE
+	returnVal := returnValFunc(10)
+	fmt.Println("Returned Value =", returnVal)
+
+	// FUNCTION AS VALUE
+	functionValue := funcAsValue
+	result := functionValue("Danoe Hehe")
+	fmt.Println(result)
+
+
+	// TO LOWER/UPPER CASE
+	words := "Hello, This Is The Words"
+	fmt.Println(strings.ToLower(words))
+	fmt.Println(strings.ToUpper(words))
+	
 	
 
+}
+
+func funcAsValue(name string) string {
+	return "Hi, " + name
+}
+
+func sayHello(time string, name string) {
+	fmt.Println("Hello, good", time, name, "!")
+}
+
+func returnValFunc(data int) int {
+	result := data * 7
+	return result
 }

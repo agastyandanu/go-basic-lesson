@@ -1,2 +1,0 @@
-go build hello.go => build file .go to .exe to execute it
-./hello => execute .exe file
